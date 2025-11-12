@@ -9,7 +9,7 @@ body{
 }
 header{
     display: flex;
-    justify-content: space-around;    
+    justify-content: space-between;    
     text-align:center;
 
 }
@@ -17,6 +17,7 @@ header{
 button {
     background-color: black;
     color: white;
+    white-space: nowrap;
 }
 
 #aboutme{
