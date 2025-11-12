@@ -1,0 +1,32 @@
+*{
+    padding: 0.6%;
+}
+
+body{
+    /*
+    background-image: url(./img/codigo.jpg);
+    */
+}
+header{
+    display: flex;
+    justify-content: space-around;    
+    text-align:center;
+
+}
+
+button {
+    background-color: black;
+    color: white;
+}
+
+#aboutme{
+    background-color: white;
+    color: black;
+
+}
+
+
+
+.nombre {
+    font-size: 1000%;
+}
