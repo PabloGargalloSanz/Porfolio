@@ -73,7 +73,7 @@ footer {
 }
 
 
-.logosContacto{
+.logosContacto {
     width: 3%;
     height: 3%;
 }
@@ -82,4 +82,9 @@ footer {
 a{
     text-decoration:none;
 
+}
+
+.logoLenguaje{
+     width: 20%;
+    height: 20%;
 }

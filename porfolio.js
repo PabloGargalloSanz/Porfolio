@@ -33,3 +33,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // (Opcional) Asegurar que la sección inicial se muestre al cargar por si el CSS falla
     // mostrarSeccion('aboutme'); 
 });
+
