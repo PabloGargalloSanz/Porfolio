@@ -1,5 +1,4 @@
 *{
-
     padding: 1%;
 }
 
@@ -56,13 +55,8 @@ footer {
 }
 
 #skills-section {
-    /* ACTIVA FLEXBOX */
-    display: flex;
-    
-    /* PERMITE QUE EL H2 SE ENVUELVA A LA LÍNEA DE ARRIBA Y LOS ARTICLES A LA DE ABAJO */
+   display: flex;
     flex-wrap: wrap; 
-    
-    /* DISTRIBUYE EL ESPACIO HORIZONTALMENTE */
     justify-content: space-around; 
     
     padding: 30px 5%; 
@@ -79,4 +73,13 @@ footer {
 }
 
 
+.logosContacto{
+    width: 3%;
+    height: 3%;
+}
 
+
+a{
+    text-decoration:none;
+
+}
