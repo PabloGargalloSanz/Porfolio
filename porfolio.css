@@ -8,8 +8,8 @@
 
 body {
   font-family: system-ui, sans-serif;
-  background-color: oklch(0.145 0 0);
-  color: oklch(0.985 0 0);
+  background-color: rgb(77, 74, 74);
+  color: white;
   
 }
 header{
@@ -49,9 +49,11 @@ button {
     font-size: 1000%;
 }
 
+/*
 section > div {
     min-height: 100vh;
 }
+*/
 
 footer {
     
@@ -215,33 +217,4 @@ a{
   color: rgba(255, 255, 255, 0.8);
 }
 
-.scrollbar-glass:hover {
-  background: radial-gradient(
-      47.2% 50% at 50.39% 88.37%,
-      rgba(255, 255, 255, 0.12) 0%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    rgba(255, 255, 255, 0.08);
-}
 
-.scrollbar-glass::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0.1%;
-  background: linear-gradient(
-    150deg,
-    rgba(255, 255, 255, 0.48) 16.73%,
-    rgba(255, 255, 255, 0.08) 30.2%,
-    rgba(255, 255, 255, 0.08) 68.2%,
-    rgba(255, 255, 255, 0.6) 81.89%
-  );
-  border-radius: inherit;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: xor;
-  -webkit-mask-composite: xor;
-  pointer-events: none;
-}
