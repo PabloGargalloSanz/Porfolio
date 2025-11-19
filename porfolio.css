@@ -230,6 +230,28 @@ footer {
   align-items: center;
 }
 
+#img_hispa{
+  height: 100%;
+  width: 100%;
+}
+#img_pacman{
+  height: 50%;
+  width: 50%;
+}
+#img_restaurante{
+  height: 50%;
+  width: 50%;
+}
+#img_coolerfod{
+  height: 100%;
+  width: 100%;
+}
+
+.texto_proyectos{
+  height: 80%;
+  width: 80%;
+}
+
 /* CONTACTO*/
 
 .logosContacto {
