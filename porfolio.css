@@ -235,36 +235,45 @@ footer {
 
 
 /* PROYECTOS */
-#proyectos{
-
-  align-items: center;
-
+.proyecto {
+  display: flex;           
+  align-items: center;  
+  justify-content: space-around;   
+  gap: 20px;               
 }
-.proyecto{
-  display: flex;
-  align-items: center;
+
+.proyecto > a {                
+  display: flex;           
+  justify-content: center; 
+  align-items: center;     
+}
+
+.proyecto > a, 
+.texto_proyectos {
+  flex: 1;                 
+  flex-basis: 0;           
+}
+
+#img_pacman {
+  width: 60%;                        
 }
 
 #img_hispa{
-  height: 80%;
-  width: 80%;
-}
-#img_pacman{
-  height: 50%;
-  width: 50%;
+  height: 90%;
+  width: 90%;
 }
 #img_restaurante{
-  height: 50%;
-  width: 50%;
-}
-#img_coolerfod{
   height: 100%;
   width: 100%;
 }
+#img_coolerfod{
+  height: 70%;
+  width: 70%;
+}
 
 .texto_proyectos{
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
 }
 
 /* CONTACTO*/
