@@ -55,9 +55,11 @@ function typeEffect(element, speed, callback) {
 // --- Logic app --- //
 //////////////////////////////////////////
 //habra que poner cuando acabe la funcion de mi nombre
-
-
 document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(iniciarEfecto, 3000);
+})
+
+function iniciarEfecto() {
     const targets = document.querySelectorAll('p.typing-target');
     
     // Velocity
@@ -79,7 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     startTypingSequence(0); 
-});
+};
+
+
 
 // --- LÓGICA DEL EFECTO DE FLUJO DE COLOR (Animation Flow) ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -87,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const targets = document.querySelectorAll('h2.section-title');
     
     // El retraso entre letras crea el efecto de flujo
-    const delayBetweenLetters = 0.05; // 50ms de retraso entre cada letra
+    const delayBetweenLetters = 0.1; // 50ms de retraso entre cada letra
     let animationCounter = 0; // Contador global de letras para el retraso
 
     targets.forEach(h2 => {
