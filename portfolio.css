@@ -169,6 +169,8 @@ nav {
   box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
 }
 
+
+
 /*  EDUCATION  */
 .timeline {
   position: relative;
@@ -253,16 +255,16 @@ nav {
 }
 
 .skill-list {
-  display: flex;
-  grid-template-columns: repeat(3, 100vh);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   margin-top: 1.5rem;
 }
 
 .logoLenguaje {
   background: rgba(255,255,255,0.1);
-  padding: 5px 10px;
+  padding: 0px;
   border-radius: 4px;
   font-size: 4rem;
 }
