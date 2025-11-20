@@ -3,7 +3,7 @@
   --bg-color: #121212;
   --card-bg: #1e1e1e;
   --primary: #00d4ff; 
-  --secondary: #7b2cbf; 
+  --secondary: #407ef1; 
   --text-main: #ffffff;
   --text-muted: #b3b3b3;
   --font-heading: 'Poppins', sans-serif;
@@ -52,6 +52,30 @@ section {
 .typing-target {
 opacity: 0; 
 }
+
+.section-title span {
+/* Reset del estilo para que las letras puedan cambiar de color */
+-webkit-text-fill-color: initial;
+color: var(--primary); 
+opacity: 1; /* Asegura la visibilidad */
+display: inline-block; /* Necesario para la animación */
+
+/* Configuración de la animación */
+animation-name: color-flow-keys;
+animation-duration: 3s; /* Duración total de un ciclo de color */
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-fill-mode: forwards;
+}
+
+/* Keyframes de cambio de color */
+@keyframes color-flow-keys {
+0% { color: var(--primary); }/* Azul/Cyan */
+33% { color: #f0f8ff; } /* Blanco/Pastel */
+66% { color: var(--secondary); }/* Púrpura */
+100% { color: var(--primary); }
+}
+
 
 /*  HEADER */
 header {

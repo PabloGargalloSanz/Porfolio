@@ -80,3 +80,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startTypingSequence(0); 
 });
+
+// --- LÓGICA DEL EFECTO DE FLUJO DE COLOR (Animation Flow) ---
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Selecciona todos los <h2> de sección (usaremos section-title)
+    const targets = document.querySelectorAll('h2.section-title');
+    
+    // El retraso entre letras crea el efecto de flujo
+    const delayBetweenLetters = 0.05; // 50ms de retraso entre cada letra
+    let animationCounter = 0; // Contador global de letras para el retraso
+
+    targets.forEach(h2 => {
+        // Guarda el texto original
+        const text = h2.textContent.trim();
+        let newHtml = '';
+        
+        // Divide el texto en letras y envuelve cada una en un span con su delay
+        for (let i = 0; i < text.length; i++) {
+            const char = text[i];
+            
+            if (char === ' ') {
+                // Mantiene los espacios sin span
+                newHtml += ' ';
+            } else {
+                // Genera el delay incremental para el efecto de flujo
+                const delay = animationCounter * delayBetweenLetters;
+                
+                // Añade el span con el delay
+                newHtml += `<span style="animation-delay: ${delay}s">${char}</span>`;
+                animationCounter++;
+            }
+        }
+        
+        // Reemplaza el contenido del H2 con las letras spanizadas
+        h2.innerHTML = newHtml;
+
+        // Limpia el contador para que la siguiente sección comience el retraso desde cero
+        animationCounter = 0; 
+    });
+});
