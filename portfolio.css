@@ -28,6 +28,7 @@ body {
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 
+
 section {
   padding: 6rem 10% 4rem;
   min-height: 100vh;
@@ -46,6 +47,10 @@ section {
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+.typing-target {
+opacity: 0; 
 }
 
 /*  HEADER */
