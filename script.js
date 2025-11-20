@@ -8,7 +8,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-/*  typing efect*/
+//retardo
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(iniciarEfecto, 3000);
+})
+
+//  typing efect
 
 function typeEffect(element, speed, callback) {
     if (!element) return;
@@ -52,13 +57,6 @@ function typeEffect(element, speed, callback) {
     }, speed);
 }
 
-// --- Logic app --- //
-//////////////////////////////////////////
-//habra que poner cuando acabe la funcion de mi nombre
-document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(iniciarEfecto, 3000);
-})
-
 function iniciarEfecto() {
     const targets = document.querySelectorAll('p.typing-target');
     
@@ -83,43 +81,44 @@ function iniciarEfecto() {
     startTypingSequence(0); 
 };
 
+// butt show
+function mostrarBoton() {
+        const button = document.querySelector('.cta-button');
+        if (button) {
+            button.classList.add('show');
+            console.log("Todas las letras han terminado. Botón visible.");
+        }
+    }
 
 
-// --- LÓGICA DEL EFECTO DE FLUJO DE COLOR (Animation Flow) ---
+
+//   COLOR 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Selecciona todos los <h2> de sección (usaremos section-title)
     const targets = document.querySelectorAll('h2.section-title');
     
-    // El retraso entre letras crea el efecto de flujo
-    const delayBetweenLetters = 0.1; // 50ms de retraso entre cada letra
-    let animationCounter = 0; // Contador global de letras para el retraso
+    const delayBetweenLetters = 0.1; 
+    let animationCounter = 0; 
 
     targets.forEach(h2 => {
-        // Guarda el texto original
         const text = h2.textContent.trim();
         let newHtml = '';
         
-        // Divide el texto en letras y envuelve cada una en un span con su delay
         for (let i = 0; i < text.length; i++) {
             const char = text[i];
             
             if (char === ' ') {
-                // Mantiene los espacios sin span
                 newHtml += ' ';
             } else {
-                // Genera el delay incremental para el efecto de flujo
                 const delay = animationCounter * delayBetweenLetters;
                 
-                // Añade el span con el delay
                 newHtml += `<span style="animation-delay: ${delay}s">${char}</span>`;
                 animationCounter++;
             }
         }
         
-        // Reemplaza el contenido del H2 con las letras spanizadas
         h2.innerHTML = newHtml;
 
-        // Limpia el contador para que la siguiente sección comience el retraso desde cero
-        animationCounter = 0; 
     });
+    
+    setTimeout(mostrarBoton, 15000);
 });
