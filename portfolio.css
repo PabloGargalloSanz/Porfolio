@@ -212,7 +212,7 @@ nav {
   opacity: 0;
   left: 10vw;
   width: 80vw;
-  animation: switch 30s linear infinite;
+  animation: switch 30s linear forwards;
 }
 
 @keyframes switch {
@@ -327,9 +327,11 @@ nav {
 
 .logoLenguaje {
   background: rgba(255,255,255,0.1);
-  padding: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   border-radius: 4px;
   font-size: 4rem;
+  
 }
 
 /* EXPERIENCE */
