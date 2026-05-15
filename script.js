@@ -122,3 +122,19 @@ document.addEventListener('DOMContentLoaded', () => {
     
     setTimeout(mostrarBoton, 15000);
 });
+
+// menu hamburguesa
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+const enlacesMenu = document.querySelectorAll('.nav-links a');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+enlacesMenu.forEach(enlace => {
+    enlace.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
